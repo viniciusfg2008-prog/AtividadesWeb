@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP</title>
+</head>
+<style>
+    .tela{
+        position: relative;
+        left: 10px;
+    }
+    .esp{
+        line-height: 2.0;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="tela">
+    <div>
+    <h1>O que é HTTP?</h1>
+    <p>HTTP é um protocolo para buscar recursos, como documentos HTML. 
+       É a base de qualquer troca de dados na Web e é um protocolo cliente-servidor</p>
+    <h2>Utilização na Web</h2>
+    <ul class="esp">
+        <li><b>Navegação em Sites:</b> Quando você digita um endereço no navegador, ele age como cliente e pede a página ao servidor do site.</li>
+        <li><b>Carregamento de Recursos:</b> O navegador monta a página inteira juntando vários pedidos HTTP para textos, imagens, vídeos e códigos.</li>
+        <li><b>Uso de Métodos (Verbos):</b> Usa comandos como GET (para buscar dados) e POST (para enviar dados, como preencher um formulário).</li>
+        <li><b>Versão Segura (HTTPS):</b>  Adiciona uma camada de segurança e criptografia para proteger os dados trocados na rede.</li>
+    </ul>
+    </div>
+    <div class="container">
+        <img src="./img/http.webp" height="350" width="500">
+    </div>
+    <h2>Estrutura</h2>
+    <ul class="esp">
+        <li><b>Método (Verbo):</b> A ação desejada (ex: GET, POST).</li>
+        <li><b>Caminho (URL/Path):</b> O endereço do recurso no servidor.</li>
+        <li><b>Versão:</b> O protocolo utilizado (ex: HTTP/1.1).</li>
+        <li><b>Headers (Cabeçalhos):</b> Informações extras, como o tipo de navegador ou formato aceito.</li>
+        <li><b>Body (Corpo):</b> Dados enviados ao servidor, usado em métodos como POST ou PUT.</li>
+    </ul>
+    <h2>Exemplos</h2>
+      <h3>GET</h3>
+    <p>GET /api/v2/pokemon/pikachu HTTP/1.1<br>
+       Host: pokeapi.co<br>
+       Accept: application/json</p>
+      <h3>POST</h3>
+    <p>POST /usuarios HTTP/1.1<br>
+       Host: meusite.com<br>
+       Content-Type: application/json<br>
+       Content-Length: 38<br>
+       {"nome": "Ana", "email": "ana@email.com"}</p>
+      <h3>PUT</h3>
+    <p>PUT /usuarios/15 HTTP/1.1<br>
+       Host: meusite.com<br>
+       Content-Type: application/json<br>
+       {"nome": "Ana Maria", "email": "ana.novo@email.com"}</p>
+       <h3>DELETE</h3>      
+    <p>DELETE /usuarios/15 HTTP/1.1<br>
+       Host: meusite.com</p>
+    </div>
+</body>
+</html>
