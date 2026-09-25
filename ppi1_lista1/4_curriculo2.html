@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - João da Silva</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        header, section, footer {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        .destaque {
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+
+        <h1>João da Silva</h1>
+
+        <!-- Foto -->
+        <img src="https://via.placeholder.com/150"
+             alt="Foto de João da Silva">
+
+        <p>
+            Desenvolvedor Web apaixonado por tecnologia,
+            programação e criação de soluções digitais.
+        </p>
+
+        <!-- Contato -->
+        <p>
+            <b>E-mail:</b>
+            <a href="mailto:joao@email.com">
+                joao@email.com
+            </a>
+        </p>
+
+        <p>
+            <b>Telefone:</b>
+            <a href="tel:+5511999999999">
+                (11) 99999-9999
+            </a>
+        </p>
+
+        <p>
+            <b>LinkedIn:</b>
+            <a href="https://www.linkedin.com/" target="_blank">
+                Meu LinkedIn
+            </a>
+        </p>
+
+    </header>
+
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacao">Formação</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#horarios">Horários</a>
+
+    </nav>
+
+
+    <!-- SOBRE -->
+    <section id="sobre">
+
+        <h2>Sobre mim</h2>
+
+        <p>
+            Sou um profissional dedicado ao desenvolvimento de sistemas
+            e aplicações web. Tenho interesse em
+            <span class="destaque">HTML, CSS, JavaScript e programação</span>.
+        </p>
+
+        <p>
+            Atualmente estou estudando desenvolvimento web e buscando
+            aprimorar meus conhecimentos em <em>tecnologia e programação</em>.
+        </p>
+
+    </section>
+
+
+    <!-- HABILIDADES -->
+    <section id="habilidades">
+
+        <h2>Habilidades técnicas</h2>
+
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git e GitHub</li>
+            <li>Banco de dados</li>
+        </ul>
+
+        <p>
+            Meu principal objetivo é me tornar um
+            <strong>desenvolvedor Full Stack</strong>.
+        </p>
+
+    </section>
+
+
+    <!-- FORMAÇÃO -->
+    <section id="formacao">
+
+        <h2>Formação acadêmica</h2>
+
+        <article>
+
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+
+            <p>
+                <strong>Faculdade de Tecnologia XYZ</strong>
+                <br>
+                2024 - 2026
+            </p>
+
+            <p>
+                Curso voltado para desenvolvimento de software,
+                banco de dados, programação e desenvolvimento web.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia">
+
+        <h2>Experiência profissional</h2>
+
+        <article>
+
+            <h3>Desenvolvedor Web Júnior</h3>
+
+            <p>
+                <strong>Empresa Tecnologia LTDA</strong>
+                <br>
+                2025 - Atualmente
+            </p>
+
+            <p>
+                Desenvolvimento de páginas utilizando
+                <strong>HTML e CSS</strong>.
+                Também participei da manutenção de sistemas
+                utilizando <em>JavaScript</em>.
+            </p>
+
+            <p>
+                <mark>Projeto de destaque:</mark>
+                desenvolvimento de um sistema interno para
+                gerenciamento de funcionários.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>Estagiário de TI</h3>
+
+            <p>
+                <strong>Empresa Exemplo</strong>
+                <br>
+                2024 - 2025
+            </p>
+
+            <p>
+                Auxílio na manutenção de computadores,
+                instalação de softwares e suporte aos usuários.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- DETALHES -->
+    <section>
+
+        <h2>Informações adicionais</h2>
+
+        <details>
+
+            <summary>Ver mais informações</summary>
+
+            <p>
+                Tenho interesse em aprender novas tecnologias
+                e participar de projetos de desenvolvimento de software.
+            </p>
+
+            <p>
+                Atualmente estou estudando HTML<sub>5</sub>,
+                CSS e JavaScript.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- TABELA DE HORÁRIOS -->
+    <section id="horarios">
+
+        <h2>Grade de horários</h2>
+
+        <table>
+
+            <tr>
+                <th>Matéria</th>
+                <th>Dia</th>
+                <th>Horário</th>
+            </tr>
+
+            <tr>
+                <td>HTML e CSS</td>
+                <td>Segunda-feira</td>
+                <td>19:00 - 21:00</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Terça-feira</td>
+                <td>19:00 - 21:00</td>
+            </tr>
+
+            <tr>
+                <td>Banco de Dados</td>
+                <td>Quarta-feira</td>
+                <td>19:00 - 21:00</td>
+            </tr>
+
+            <tr>
+                <td>Python</td>
+                <td>Quinta-feira</td>
+                <td>19:00 - 21:00</td>
+            </tr>
+
+            <tr>
+                <td>Projeto Web</td>
+                <td>Sexta-feira</td>
+                <td>19:00 - 21:00</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            <b>João da Silva</b> -
+            Currículo fictício para atividade acadêmica.
+        </p>
+
+        <a href="#inicio">Voltar ao início</a>
+
+    </footer>
+
+</body>
+
+</html>
