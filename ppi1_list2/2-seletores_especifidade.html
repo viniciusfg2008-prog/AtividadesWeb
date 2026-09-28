@@ -1,0 +1,79 @@
+<!DOCTYPE html> <html lang="pt-BR"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>Especificidade dos Seletores CSS</title> 
+    </head> 
+    <body>
+<h1>Especificidade dos Seletores CSS</h1>
+
+  <h2>Item 1</h2>
+
+  <pre><code>&lt;li id="lip0"&gt;Abacaxi&lt;/li&gt;</code></pre>
+
+  O seletor <code>li</code> se aplica porque o elemento é um <code>li</code>.<br>
+  Nenhuma outra regra se aplica a esse elemento.<br>
+  <strong>Resultado: vermelho.</strong>
+
+  <h2>Item 2</h2>
+
+  <pre><code>&lt;li class="fruta"&gt;Melão&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code> e <code>.fruta</code> se aplicam.<br>
+  Como uma classe é mais específica que um elemento, <code>.fruta</code> vence.<br>
+  <strong>Resultado: cinza.</strong>
+
+  <h2>Item 3</h2>
+
+  <pre><code>&lt;li id="lip2" class="fruta"&gt;Pera&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code>, <code>.fruta</code> e <code>#lip2</code> se aplicam.<br>
+  O ID possui maior especificidade que classe e elemento.<br>
+  <strong>Resultado: azul.</strong>
+
+<h2>Item 4</h2>
+
+  <pre><code>&lt;li id="lip3" class="fruta"&gt;Uva&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code>, <code>.fruta</code>, <code>#lip3</code> e
+  <code>#lip3.fruta</code> se aplicam.<br>
+  <code>#lip3.fruta</code> é mais específico porque possui um ID e uma classe.<br>
+  <strong>Resultado: laranja.</strong>
+
+<h2>Item 5</h2>
+
+  <pre><code>&lt;li id="lip4" class="fruta"&gt;Maçã&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code> e <code>.fruta</code> se aplicam.<br>
+  As regras com <code>lip3</code>, <code>lip2</code> e outros IDs não se aplicam, pois o ID é <code>lip4</code>.<br>
+  Como <code>.fruta</code> é mais específico que <code>li</code>, ela vence.<br>
+  <strong>Resultado: cinza.</strong>
+
+<h2>Item 6</h2>
+
+  <pre><code>&lt;li class="churras"&gt;Carne&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code>, <code>.churras</code> e <code>li + li.churras</code> se aplicam.<br>
+  O <code>+</code> seleciona um <code>li</code> que vem imediatamente depois de outro <code>li</code>.<br>
+  Como essa regra é mais específica, ela vence.<br>
+  <strong>Resultado: preto.</strong>
+
+<h2>Item 7</h2>
+
+<pre><code>&lt;li class="churras"&gt;Linguiça&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code>, <code>.churras</code> e <code>li + li.churras</code> se aplicam.<br>
+  A Linguiça também está imediatamente depois de outro <code>li</code>.<br>
+  Por isso, <code>li + li.churras</code> vence.<br>
+  <strong>Resultado: preto.</strong>
+
+<h2>Item 8</h2>
+
+<pre><code>&lt;li id="lip7" class="churras" draggable="true"&gt;Pão de alho&lt;/li&gt;</code></pre>
+
+  As regras <code>li</code>, <code>.churras</code>, <code>li + li.churras</code> e
+  <code>.churras[draggable="true"]</code> se aplicam.<br>
+  A última possui uma classe e um atributo, sendo mais específica que as outras.<br>
+  A regra <code>#lip5</code> não se aplica porque o ID é <code>lip7</code>.<br>
+  <strong>Resultado: magenta.</strong>
+  
+</body> </html>
