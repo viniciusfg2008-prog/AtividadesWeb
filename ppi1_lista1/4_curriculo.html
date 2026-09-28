@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     .destaque{
@@ -23,6 +25,27 @@
         padding-right: 10px;
         background-color: rgb(171, 178, 184);
         width: 100%;
+    }
+
+    table.hor {
+        width: 100%;
+        table-layout: fixed;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hor td, .hor th{
+        width: 12.5%;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+    }
+    .hor th:has(.Col){
+        color: white;
+        background-color: black;
+        border: 1px solid white
     }
 
 </style>
@@ -77,11 +100,35 @@
         <em>2025-2026</em><br>
         Durante o final de 2025 e o começo de 2026 fiz estágio na <span class="destaque"><b>Empresa LTDA</b></span></p>
         <p><strong>Designer de Produtos</strong><br>
-        <em>2028-2030</em>
+        <em>2028-2030</em><br>
         Durante cerca de <mark>2 anos</mark> trabalhei como designer de produtos da <span class="destaque"><b>Empresa X</b></span></p>
     </section>
 
     <section id="grade">
+
+        <h2>Horários</h2>
+        <table class="hor">
+            <tr>
+                <th rowspan="2"><span class="Col">Matéria</span></th>
+            </tr>
+            <tr>
+                <td>Web</td><td>Nada</td><td>JavaScript</td><td>Java</td><td>C#</td>
+            </tr>
+            
+            <tr>
+                <th rowspan="2"> <span class="Col">Dia</span></th>
+            </tr>
+            <tr>
+                <td>Segunda</td><td>Terça</td><td>Quarta</td><td>Quinta</td><td>Sexta</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2"><span class="Col">Horário</span></th>
+            </tr>
+            <tr>
+                <td>13:30 - 15:30</td><td>Totalmente disponível</td><td>13:30 - 15:30</td><td>13:30 - 15:30</td><td>13:30 - 15:30</td>
+            </tr>
+        </table>
 
     </section>
 </body>
