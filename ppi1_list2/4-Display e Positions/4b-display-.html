@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>4b - Display Inline-Block</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .container{
+            font-size: 0; /* remove os espaços entre os blocos */
+        }
+
+        .bloco{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* centraliza o número verticalmente */
+            text-align: center;
+            font-size: 16px; /* volta o tamanho da fonte */
+            color: black;
+        }
+
+        .roxo{
+            background-color: #7200ff;
+        }
+
+        .verde{
+            background-color: green;
+        }
+
+        .vermelho{
+            background-color: red;
+        }
+
+        .amarelo{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="bloco roxo">1</div><div class="bloco verde">2</div><div class="bloco vermelho">3</div><div class="bloco amarelo">4</div>
+    </div>
+
+</body>
+</html>
