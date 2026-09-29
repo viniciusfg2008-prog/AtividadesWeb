@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Garden</title>
+  <style>
+    body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grid Garden: explicação das soluções</h1>
+
+  <h2>Nível 3</h2>
+  <pre>#water {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}</pre>
+  <p>
+    Essas propriedades contam linhas do grid, e não colunas. Para cobrir as
+    colunas 1, 2 e 3, a água começa na linha 1 e termina na linha 4, que é a
+    borda direita da terceira coluna.
+  </p>
+
+  <h2>Nível 4</h2>
+  <pre>#water {
+  grid-column-start: 5;
+  grid-column-end: 2;
+}</pre>
+  <p>
+    Quando o valor inicial é maior que o final, o navegador inverte os dois.
+    Assim, a água ocupa o espaço entre as linhas 2 e 5, ou seja, as colunas
+    2, 3 e 4.
+  </p>
+</body>
+</html>

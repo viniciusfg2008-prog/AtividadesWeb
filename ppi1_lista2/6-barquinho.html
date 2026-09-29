@@ -6,10 +6,6 @@
 
     <style>
 
-        body {
-            margin: 0;
-        }
-
         .cena {
             width: 600px;
             height: 350px;
@@ -17,9 +13,6 @@
             position: relative;
             overflow: hidden;
         }
-
-
-        /* MAR */
 
         .mar {
             position: absolute;
@@ -31,8 +24,6 @@
         }
 
 
-        /* BARQUINHO */
-
         .barquinho {
             position: absolute;
             bottom: 80px;
@@ -42,8 +33,6 @@
             animation: navegar 8s linear infinite;
             z-index: 2;
         }
-
-        /* Casco */
 
         .barquinho::after {
             content: "";
@@ -57,8 +46,6 @@
             border-radius: 0 0 40px 40px;
         }
 
-        /* Vela */
-
         .barquinho::before {
             content: "";
             position: absolute;
@@ -69,8 +56,6 @@
             background: black;
         }
 
-
-        /* Movimento do barco */
 
         @keyframes navegar {
 
@@ -89,8 +74,6 @@
 
         }
 
-
-        /* NUVEM */
 
         .nuvem {
             position: absolute;

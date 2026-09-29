@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tópicos estudados</title>
+  <style>
+    
+    .grade {
+      display: grid;
+      grid-template-columns: 3fr 2fr 2fr 1fr;
+      grid-template-rows: 62fr 55fr 42fr;
+      grid-template-areas:
+        "laranja salmao azulclaro azulclaro"
+        "azul    salmao verde     circulos"
+        "amarelo amarelo verde    circulos";
+      gap: 8px;
+      width: 100vw;
+      height: 100vh;
+      padding: 8px;
+    }
+
+    .grade a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .grade a:hover {
+      opacity: 0.85;
+    }
+
+    .laranja   { grid-area: laranja;   background: #f99d27; }
+    .salmao    { grid-area: salmao;    background: #f5b7a8; }
+    .azulclaro { grid-area: azulclaro; background: #c8dfdf; }
+    .azul      { grid-area: azul;      background: #b8c8e0; }
+    .verde     { grid-area: verde;     background: #bccd6c; }
+
+    .amarelo {
+      grid-area: amarelo;
+      display: flex;
+      background: #f4b53a;
+    }
+
+    .amarelo a {
+      flex: 1;
+    }
+
+    .circulos {
+      grid-area: circulos;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .circulos span {
+      width: clamp(16px, 3vw, 36px);
+      height: clamp(16px, 3vw, 36px);
+      border-radius: 50%;
+    }
+
+    .circulos span:nth-child(1) { background: #f0956a; }
+    .circulos span:nth-child(2) { background: #d9a9a5; }
+    .circulos span:nth-child(3) { background: #b8c48f; }
+    .circulos span:nth-child(4) { background: #d3c4e6; }
+
+    @media (max-width: 600px) {
+      .grade {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, minmax(90px, 1fr));
+        grid-template-areas:
+          "laranja"
+          "salmao"
+          "azulclaro"
+          "azul"
+          "verde"
+          "amarelo"
+          "circulos";
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .circulos {
+        flex-direction: row;
+      }
+
+      .circulos span {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grade">
+    <a class="laranja" href="https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web">WEB</a>
+    <a class="salmao" href="https://www.w3schools.com/html/">HTML</a>
+    <a class="azulclaro" href="https://www.w3schools.com/css/">CSS</a>
+    <a class="azul" href="https://www.w3schools.com/css/css3_animations.asp">Animate</a>
+    <a class="verde" href="https://www.w3schools.com/css/css_positioning.asp">Position</a>
+
+    <div class="amarelo">
+      <a href="https://www.w3schools.com/css/css3_flexbox.asp">Flex</a>
+      <a href="https://www.w3schools.com/css/css_grid.asp">Grid</a>
+    </div>
+
+    <div class="circulos">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</body>
+</html>

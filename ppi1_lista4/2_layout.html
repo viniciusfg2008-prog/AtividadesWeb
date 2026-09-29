@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout</title>
+  <style>
+
+    .pagina {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 80px 1fr 60px;
+      grid-template-areas:
+        "header  header"
+        "nav     content"
+        "nav     footer";
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+
+    header,
+    nav,
+    main,
+    footer {
+      padding: 16px;
+      border: 1px solid #000000;
+      text-align: center;
+    }
+
+    header {
+      grid-area: header;
+      background: #e9397c;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #bcb884;
+    }
+
+    main {
+      grid-area: content;
+      background: #e6ad84;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #79a898;
+    }
+
+    @media (max-width: 600px) {
+      .pagina {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas:
+          "header"
+          "nav"
+          "content"
+          "footer";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pagina">
+    <header>Header</header>
+    <nav>Nav</nav>
+    <main>Content</main>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
