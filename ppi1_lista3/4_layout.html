@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painéis com flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .paineis {
+      display: flex;
+      gap: 12px;
+      width: 90%;
+      max-width: 540px;
+      height: 250px;
+    }
+
+    .painel {
+      position: relative;
+      flex: 1;
+      border-radius: 20px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .aberto {
+      flex: 9;
+    }
+
+    .icone {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .texto {
+      position: absolute;
+      left: 40px;
+      bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: #ffffff;
+    }
+
+    .titulo {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .subtitulo {
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="paineis">
+
+    <div class="painel" style="background-image: url('https://picsum.photos/seed/floresta/600/500')">
+      <div class="icone" style="color: #ff2d78">✱</div>
+    </div>
+
+    <div class="painel aberto" style="background-image: url('https://picsum.photos/seed/neve/900/600')">
+      <div class="icone" style="color: #e6194b">❄</div>
+      <div class="texto">
+        <span class="titulo">Lâmpada</span>
+        <span class="subtitulo">Lãmpadas fundo preto</span>
+      </div>
+    </div>
+
+    <div class="painel" style="background-image: url('https://picsum.photos/seed/lago/600/500')">
+      <div class="icone" style="color: #f5b700">●</div>
+    </div>
+
+    <div class="painel" style="background-image: url('https://picsum.photos/seed/montanha/600/500')">
+      <div class="icone" style="color: #00b37e">◆</div>
+    </div>
+
+    <div class="painel" style="background-image: url('https://picsum.photos/seed/deserto/600/500')">
+      <div class="icone" style="color: #4a5cff">✲</div>
+    </div>
+
+  </div>
+</body>
+</html>
